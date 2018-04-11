@@ -7,7 +7,6 @@ var searchData=
   ['pid',['Pid',['../class_pid.html',1,'']]],
   ['pid_5fanalyze',['pid_analyze',['../namespacepid__analyze.html',1,'']]],
   ['pidmotioncontroller',['PidMotionController',['../class_pid_motion_controller.html',1,'']]],
-  ['pidtuner',['PidTuner',['../class_pid_tuner.html',1,'PidTuner'],['../class_pid_tuner.html#a1edf021b14e973c96eb07e2ca4a2214d',1,'PidTuner::PidTuner()']]],
   ['pmsc_5fid',['PMSC_ID',['../deca__regs_8h.html#a1754d490d290ea2c1a2ad4d933edbaf1',1,'deca_regs.h']]],
   ['prf',['prf',['../structdwt__config__t.html#a9f6a903664f610ca06ae6d4b3bb8d6b9',1,'dwt_config_t']]],
   ['printinfo',['printInfo',['../class_comm_module.html#af0d8e570b78712b2dd30543ffec747f5',1,'CommModule']]],

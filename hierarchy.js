@@ -60,15 +60,14 @@ var hierarchy =
     [ "rtp::Packet", "classrtp_1_1_packet.html", null ],
     [ "Pid", "class_pid.html", null ],
     [ "PidMotionController", "class_pid_motion_controller.html", null ],
-    [ "PidTuner", "class_pid_tuner.html", null ],
     [ "Quaternion", "class_quaternion.html", null ],
     [ "RadioProtocol", "class_radio_protocol.html", null ],
     [ "registerSetting_t", "structregister_setting__t.html", null ],
     [ "RobotModel", "class_robot_model.html", null ],
     [ "rtp::RobotStatusMessage", "structrtp_1_1_robot_status_message.html", null ],
     [ "rtp::RobotTxMessage", "structrtp_1_1_robot_tx_message.html", null ],
-    [ "rtp::RobotTxMessage::RobotTxMessages", "unionrtp_1_1_robot_tx_message_1_1_robot_tx_messages.html", null ],
     [ "RobotTxMessages", "union_robot_tx_messages.html", null ],
+    [ "rtp::RobotTxMessage::RobotTxMessages", "unionrtp_1_1_robot_tx_message_1_1_robot_tx_messages.html", null ],
     [ "RotarySelector< DIGITAL_IN, NUM_PINS >", "class_rotary_selector.html", null ],
     [ "RtosTimer", null, [
       [ "RtosTimerHelper", "class_rtos_timer_helper.html", null ]

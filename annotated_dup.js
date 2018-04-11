@@ -50,7 +50,6 @@ var annotated_dup =
     [ "NeoStrip", "class_neo_strip.html", "class_neo_strip" ],
     [ "Pid", "class_pid.html", "class_pid" ],
     [ "PidMotionController", "class_pid_motion_controller.html", "class_pid_motion_controller" ],
-    [ "PidTuner", "class_pid_tuner.html", "class_pid_tuner" ],
     [ "Quaternion", "class_quaternion.html", "class_quaternion" ],
     [ "RadioProtocol", "class_radio_protocol.html", "class_radio_protocol" ],
     [ "registerSetting_t", "structregister_setting__t.html", "structregister_setting__t" ],

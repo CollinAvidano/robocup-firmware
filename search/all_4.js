@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['endcycle',['endCycle',['../class_pid_tuner.html#a38073fb059ec11292923a5b30e806e20',1,'PidTuner']]],
   ['escape_5fseq_5fone',['ESCAPE_SEQ_ONE',['../class_console.html#a88ac566a85fe725564744034b909a778',1,'Console']]],
   ['escape_5fseq_5ftwo',['ESCAPE_SEQ_TWO',['../class_console.html#a9fc1bfb4f1ea91eca996ae9a9c0f2dc2',1,'Console']]],
   ['eui_5f64_5fid',['EUI_64_ID',['../deca__regs_8h.html#a6311bbf884dcfdfbdc3574fb3f731f95',1,'deca_regs.h']]],

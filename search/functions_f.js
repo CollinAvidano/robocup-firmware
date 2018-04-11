@@ -32,6 +32,6 @@ var searchData=
   ['resettemperaturepath',['resetTemperaturePath',['../class_m_p_u6050.html#a559c2d091d36a4e0489bc639916ddbb6',1,'MPU6050']]],
   ['rotaryselector',['RotarySelector',['../class_rotary_selector.html#aa0ae84128b6d0db7a36bb6ca0036f021',1,'RotarySelector']]],
   ['rtostimerhelper',['RtosTimerHelper',['../class_rtos_timer_helper.html#aa871e77f7f006dda52052a5a6758a3d1',1,'RtosTimerHelper::RtosTimerHelper(T *instance, void(T::*method)(), os_timer_type type)'],['../class_rtos_timer_helper.html#ab8faa20cf658c925acb335c1ddfa5c0e',1,'RtosTimerHelper::RtosTimerHelper(std::function&lt; void()&gt; callback, os_timer_type type)']]],
-  ['run',['run',['../class_pid_motion_controller.html#a93ea67d00e346e7dc6e45c09c51686a4',1,'PidMotionController::run()'],['../class_pid_tuner.html#add729277289f5b136dfdb023bf041aeb',1,'PidTuner::run()']]],
+  ['run',['run',['../class_pid_motion_controller.html#a93ea67d00e346e7dc6e45c09c51686a4',1,'PidMotionController']]],
   ['rxhandler',['rxHandler',['../class_radio_protocol.html#a405dfec40dade46a1f0c634332c2ecfc',1,'RadioProtocol']]]
 ];

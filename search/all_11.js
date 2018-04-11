@@ -98,7 +98,6 @@ var searchData=
   ['spi',['SPI',['../class_mbed_test_1_1_s_p_i.html',1,'MbedTest']]],
   ['stalldetection',['StallDetection',['../class_stall_detection.html',1,'']]],
   ['start',['start',['../class_ball_sensor.html#a33be94a311de451269fa5d627903fe56',1,'BallSensor::start()'],['../classmbed_1_1_i2_c_master_rtos.html#a37d7f0abd46b29924ae64834db037bb8',1,'mbed::I2CMasterRtos::start()']]],
-  ['startcycle',['startCycle',['../class_pid_tuner.html#a4d00a3e451bb86536c2b2cf5b21fc899',1,'PidTuner']]],
   ['startmaster',['startMaster',['../classmbed_1_1_i2_c_driver.html#a6ebb2df84e62811bc0d297813d66ea91',1,'mbed::I2CDriver']]],
   ['stop',['stop',['../class_ball_sensor.html#a66d9f5bd47bcdfea7acf63d1f146cdbf',1,'BallSensor::stop()'],['../classmbed_1_1_i2_c_master_rtos.html#aa278b115d3baae28e0f38d6e05fb13cd',1,'mbed::I2CMasterRtos::stop()'],['../classmbed_1_1_i2_c_slave_rtos.html#a531a28b366d14fb02e7bc54f3d07b6c4',1,'mbed::I2CSlaveRtos::stop()']]],
   ['stopmaster',['stopMaster',['../classmbed_1_1_i2_c_driver.html#a057006a54ef33be39e4a638f2cfeba76',1,'mbed::I2CDriver']]],
