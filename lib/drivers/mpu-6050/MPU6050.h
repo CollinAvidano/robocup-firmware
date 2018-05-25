@@ -405,7 +405,6 @@ THE SOFTWARE.
 class MPU6050 {
     private:
         I2Cdev *i2Cdev;
-        Serial debugSerial;
     public:
         MPU6050();
         MPU6050(uint8_t address, PinName i2cSda, PinName i2cScl);
@@ -848,7 +847,7 @@ class MPU6050 {
             uint8_t dmpGetGyroSensor(int16_t *data, const uint8_t* packet=0);
             uint8_t dmpGetGyroSensor(VectorInt16 *v, const uint8_t* packet=0);
             uint8_t dmpGetControlData(int32_t *data, const uint8_t* packet=0);
-            uint8_t dm  pGetTemperature(int32_t *data, const uint8_t* packet=0);
+            uint8_t dmpGetTemperature(int32_t *data, const uint8_t* packet=0);
             uint8_t dmpGetGravity(int32_t *data, const uint8_t* packet=0);
             uint8_t dmpGetGravity(int16_t *data, const uint8_t* packet=0);
             uint8_t dmpGetGravity(VectorInt16 *v, const uint8_t* packet=0);

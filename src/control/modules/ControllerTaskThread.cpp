@@ -14,7 +14,7 @@
 #include "TaskSignals.hpp"
 #include "io-expander.hpp"
 #include "motors.hpp"
-//#include "mpu-6050.hpp"
+#include "MPU6050_6Axis_MotionApps20.h"
 #include "stall/stall.hpp"
 using namespace std;
 
@@ -77,33 +77,60 @@ void Task_Controller(const void* args) {
     const auto threadPriority = osThreadGetPriority(threadID);
     (void)threadPriority;  // disable warning if unused
 
-#if 0 /* enable whenever the imu is actually used */
-    MPU6050 imu(RJ_I2C_SDA, RJ_I2C_SCL);
+#if 1 /* enable whenever the imu is actually used */
 
-    imu.setBW(MPU6050_BW_256);
-    imu.setGyroRange(MPU6050_GYRO_RANGE_250);
-    imu.setAcceleroRange(MPU6050_ACCELERO_RANGE_2G);
-    imu.setSleepMode(false);
+    int16_t ax = 0, ay = 0, az = 0,
+            gx = 0, gy = 0, gz = 0;
 
-    char testResp;
-    if ((testResp = imu.testConnection())) {
-        float resultRatio[6];
-        imu.selfTest(resultRatio);
-        LOG(INFO,
-            "IMU self test results:\r\n"
-            "    Accel (X,Y,Z):\t(%2.2f%%, %2.2f%%, %2.2f%%)\r\n"
-            "    Gyro  (X,Y,Z):\t(%2.2f%%, %2.2f%%, %2.2f%%)",
-            resultRatio[0], resultRatio[1], resultRatio[2], resultRatio[3],
-            resultRatio[4], resultRatio[5]);
+    int ax_offset = 0, ay_offset = 0, az_offset = 0,
+        gx_offset = 0, gy_offset = 0, gz_offset = 0;
 
-        LOG(OK, "Control loop ready!\r\n    Thread ID: %u, Priority: %d",
-            ((P_TCB)threadID)->task_id, threadPriority);
-    } else {
-        LOG(SEVERE,
-            "MPU6050 not found!\t(response: 0x%02X)\r\n    Falling back to "
-            "sensorless control loop.",
-            testResp);
-    }
+    ax_offset = 534;
+    ay_offset = -567;
+    az_offset = 6650;
+    gx_offset = 86;
+    gy_offset = -48;
+    gz_offset = -140;
+
+    MPU6050 imu(MPU6050_DEFAULT_ADDRESS, RJ_I2C_SDA, RJ_I2C_SCL);
+    imu.initialize();
+
+    // FILE *fp = fopen("/local/OFFSETS.txt", "r");  // Open "out.txt" on the local file system for writing
+    int success = -1;
+
+    // printf("open\r\n");
+    // if (fp != nullptr) {
+        // success = fscanf(fp, "%d %d %d %d %d %d", &ax_offset, &ay_offset, &az_offset,
+                                                  // &gx_offset, &gy_offset, &gz_offset);
+        // // printf("fscanf done\r\n");
+        // fclose(fp);
+        // // printf("closed\r\n");
+    // }
+
+    imu.setFullScaleGyroRange(MPU6050_GYRO_FS_1000);
+    imu.setFullScaleAccelRange(MPU6050_ACCEL_FS_8);
+
+    imu.setXAccelOffset(ax_offset);
+    imu.setYAccelOffset(ay_offset);
+    imu.setZAccelOffset(az_offset);
+    imu.setXGyroOffset(gx_offset);
+    imu.setYGyroOffset(gy_offset);
+    imu.setZGyroOffset(gz_offset);
+
+    // if (success == 6) {
+        // printf("Successfully imported offsets from offsets.txt\r\n");
+    // } else {
+        // printf("Failed to import offsets from offsets.txt, defaulting to 0\r\n");
+    // }
+
+    // Thread::wait(2000);
+
+    // while (true) {
+        // imu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+        // printf("%d\t%d\t%d\t%d\t%d\t%d\r\n", ax, ay, az, gx, gy, gz);
+        // Thread::wait(2);
+    // }
+
 #endif
 
     // signal back to main and wait until we're signaled to continue
@@ -118,7 +145,25 @@ void Task_Controller(const void* args) {
     commandTimeoutTimer = make_unique<RtosTimerHelper>(
         [&]() { commandTimedOut = true; }, osTimerPeriodic);
 
+    float pos_x = 0.0f;
+    float pos_y = 0.0f;
+    float vel_x = 0.0f;
+    float vel_y = 0.0f;
+    float rot = 0.0f;
+
     while (true) {
+        imu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+        // printf("%d\t%d\t%d\t%d\t%d\t%d\r\n", ax, ay, az, gx, gy, gz);
+
+        // vel_x += ax;// * 0.001f;
+        // vel_y += ay;// * 0.001f;
+
+        // pos_x += vel_x * 1/1000.0f;
+        // pos_y += vel_y * 1/1000.0f;
+        // rot += gz * .001f;
+
+        // printf("% 10f % 10f % 10f\r\n", pos_x, pos_y, rot);
+
 #if 0 /* enable whenever the imu is actually used */
         imu.getGyro(gyroVals);
         imu.getAccelero(accelVals);
