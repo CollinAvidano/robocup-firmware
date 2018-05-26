@@ -16,7 +16,6 @@ var searchData=
   ['commport',['CommPort',['../class_comm_port.html',1,'']]],
   ['config',['config',['../class_m_c_p23017.html#a0012ecd9ece2bbe2f1ac473abf76fe29',1,'MCP23017']]],
   ['configure',['configure',['../class_f_p_g_a.html#afc8d26c5164d391fe9916f4f626e4f9c',1,'FPGA']]],
-  ['confmessage',['ConfMessage',['../structrtp_1_1_conf_message.html',1,'rtp']]],
   ['console',['Console',['../class_console.html',1,'']]],
   ['controlmessage',['ControlMessage',['../structrtp_1_1_control_message.html',1,'rtp']]]
 ];

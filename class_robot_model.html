@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('class_robot_model.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_robot_model-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -129,10 +130,22 @@ $(document).ready(function(){initNavTree('class_robot_model.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a53c9f7fd319943128d2c6a1d5617f50e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53c9f7fd319943128d2c6a1d5617f50e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RobotModel</b> (<a class="el" href="class_robot_model.html">RobotModel</a> const &amp;)=delete</td></tr>
+<tr class="separator:a53c9f7fd319943128d2c6a1d5617f50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d9233b399324c653083e78e779cc098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d9233b399324c653083e78e779cc098"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_robot_model.html">RobotModel</a> const &amp;)=delete</td></tr>
+<tr class="separator:a4d9233b399324c653083e78e779cc098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a371f2a73a77c19c7771bfdef12b7b5a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a371f2a73a77c19c7771bfdef12b7b5a9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#a371f2a73a77c19c7771bfdef12b7b5a9">recalculateBotToWheel</a> ()</td></tr>
 <tr class="memdesc:a371f2a73a77c19c7771bfdef12b7b5a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This should be called when any of the other parameters are changed. <br /></td></tr>
 <tr class="separator:a371f2a73a77c19c7771bfdef12b7b5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad3a68a3a8d6036a1706c9d42c32d3585"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3a68a3a8d6036a1706c9d42c32d3585"></a>
+static <a class="el" href="class_robot_model.html">RobotModel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> ()</td></tr>
+<tr class="separator:ad3a68a3a8d6036a1706c9d42c32d3585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -152,6 +165,9 @@ std::array&lt; double, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"
 Eigen::Matrix&lt; double, 4, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#ab57cfae1ca9a6b62813f60e303b88e65">BotToWheel</a></td></tr>
 <tr class="memdesc:ab57cfae1ca9a6b62813f60e303b88e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">wheelSpeeds = BotToWheel * V_bot <br /></td></tr>
 <tr class="separator:ab57cfae1ca9a6b62813f60e303b88e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9553f6715c61922ef329ba3ffe89f850"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9553f6715c61922ef329ba3ffe89f850"></a>
+Eigen::Matrix&lt; double, 3, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>WheelToBot</b></td></tr>
+<tr class="separator:a9553f6715c61922ef329ba3ffe89f850"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc8de2fc6bd506d4d35642b8b60c983"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fc8de2fc6bd506d4d35642b8b60c983"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>DutyCycleMultiplier</b> = 2.0f</td></tr>
 <tr class="separator:a4fc8de2fc6bd506d4d35642b8b60c983"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,7 +175,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>DutyCycleMultiplier<
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Model parameters for a robot. Used by the controls system. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/control/modules/control/<a class="el" href="_robot_model_8hpp_source.html">RobotModel.hpp</a></li>
+<li>lib/robocup-fshare/include/rc-fshare/<a class="el" href="robot__model_8hpp_source.html">robot_model.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -167,7 +183,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>DutyCycleMultiplier<
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_robot_model.html">RobotModel</a></li>
-    <li class="footer">Generated on Fri May 25 2018 22:19:23 for GT RoboCup SSL by
+    <li class="footer">Generated on Sat May 26 2018 17:58:56 for GT RoboCup SSL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

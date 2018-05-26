@@ -1,7 +1,6 @@
 var searchData=
 [
   ['datarate',['dataRate',['../structdwt__config__t.html#ab3116150c2fc6243355f7766c2204b5a',1,'dwt_config_t']]],
-  ['debugmessage',['DebugMessage',['../structrtp_1_1_debug_message.html',1,'rtp']]],
   ['deca_5fparam_5ftypes_2eh',['deca_param_types.h',['../deca__param__types_8h.html',1,'']]],
   ['deca_5fregs_2eh',['deca_regs.h',['../deca__regs_8h.html',1,'']]],
   ['deca_5fsleep',['deca_sleep',['../classdw1000__api.html#aecc468bd72488f23e298ed7cdab4b151',1,'dw1000_api']]],

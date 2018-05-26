@@ -12,7 +12,5 @@ var class_radio_protocol =
     [ "start", "class_radio_protocol.html#ad5ce99735e5ccf4960b67181ceb80454", null ],
     [ "state", "class_radio_protocol.html#aab934bc409cef68af1ae93086fe2b9d7", null ],
     [ "stop", "class_radio_protocol.html#a26cee18a34c048251045fdf549eed1b1", null ],
-    [ "confCallback", "class_radio_protocol.html#ad68f50bcdcef1ac39e3057c4e954d6d0", null ],
-    [ "debugCallback", "class_radio_protocol.html#a420532419bcac47884f237ab681018f0", null ],
     [ "rxCallback", "class_radio_protocol.html#a42423d86a2259acb1acc80a054739bb5", null ]
 ];

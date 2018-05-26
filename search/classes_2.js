@@ -6,7 +6,6 @@ var searchData=
   ['commlink',['CommLink',['../class_comm_link.html',1,'']]],
   ['commmodule',['CommModule',['../class_comm_module.html',1,'']]],
   ['commport',['CommPort',['../class_comm_port.html',1,'']]],
-  ['confmessage',['ConfMessage',['../structrtp_1_1_conf_message.html',1,'rtp']]],
   ['console',['Console',['../class_console.html',1,'']]],
   ['controlmessage',['ControlMessage',['../structrtp_1_1_control_message.html',1,'rtp']]]
 ];

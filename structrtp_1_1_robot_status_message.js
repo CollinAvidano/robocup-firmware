@@ -2,6 +2,8 @@ var structrtp_1_1_robot_status_message =
 [
     [ "ballSenseStatus", "structrtp_1_1_robot_status_message.html#ac9d8fdf664ed9429798dcde2772b6f96", null ],
     [ "battVoltage", "structrtp_1_1_robot_status_message.html#a8dd7ef8922079f3509bc171a8850aed0", null ],
+    [ "buffer", "structrtp_1_1_robot_status_message.html#ac58a360325f936118186681de5e07572", null ],
+    [ "encDeltas", "structrtp_1_1_robot_status_message.html#ac5866c68d469c2679907cd077bf965c9", null ],
     [ "fpgaStatus", "structrtp_1_1_robot_status_message.html#a669577d3233a8c3bf307c6c2876f0971", null ],
     [ "kickHealthy", "structrtp_1_1_robot_status_message.html#ac7b1c4cdfd408d4d65ea03e54d2f4cd2", null ],
     [ "kickStatus", "structrtp_1_1_robot_status_message.html#ad88b622e4b387d8910078737f2367db6", null ],

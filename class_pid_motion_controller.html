@@ -110,7 +110,6 @@ $(document).ready(function(){initNavTree('class_pid_motion_controller.html','');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_pid_motion_controller-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -123,12 +122,6 @@ $(document).ready(function(){initNavTree('class_pid_motion_controller.html','');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8cf92d17fe21f925d087f7c0503fb805"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cf92d17fe21f925d087f7c0503fb805"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> (float dt, const Eigen::Vector4f &amp;wheelVelErr)</td></tr>
-<tr class="separator:a8cf92d17fe21f925d087f7c0503fb805"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5334cd1a665bbd95bfcf8a743b76ca19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5334cd1a665bbd95bfcf8a743b76ca19"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>save_log</b> ()</td></tr>
-<tr class="separator:a5334cd1a665bbd95bfcf8a743b76ca19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaf885ee63415d2e0596714cb8bfa470"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaf885ee63415d2e0596714cb8bfa470"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setPidValues</b> (float p, float i, float d, unsigned int windup, float derivAlpha)</td></tr>
 <tr class="separator:acaf885ee63415d2e0596714cb8bfa470"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,26 +141,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setTargetVel</b> (Eig
 <tr class="memdesc:a93ea67d00e346e7dc6e45c09c51686a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the duty cycle values for the motors to drive at the target velocity.  <a href="#a93ea67d00e346e7dc6e45c09c51686a4">More...</a><br /></td></tr>
 <tr class="separator:a93ea67d00e346e7dc6e45c09c51686a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aa6901bab1cf3745268f44e084fbcf73b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6901bab1cf3745268f44e084fbcf73b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>logging</b> = true</td></tr>
-<tr class="separator:aa6901bab1cf3745268f44e084fbcf73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78651d2c00d43168bcac9a52ee4eef01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78651d2c00d43168bcac9a52ee4eef01"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cur_sample</b> = 0</td></tr>
-<tr class="separator:a78651d2c00d43168bcac9a52ee4eef01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6be7600fc50acfb37a5a472611f10eb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6be7600fc50acfb37a5a472611f10eb3"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>duties</b> [4] = {0, 0, 0, 0}</td></tr>
-<tr class="separator:a6be7600fc50acfb37a5a472611f10eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a80a72f0e0cee76207394dbacb92d0768"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80a72f0e0cee76207394dbacb92d0768"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>num_samples</b> = 1000</td></tr>
-<tr class="separator:a80a72f0e0cee76207394dbacb92d0768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ba78e6d1053e8dfa092eb926e8d5900"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ba78e6d1053e8dfa092eb926e8d5900"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>dt_per_sample</b> = 3</td></tr>
-<tr class="separator:a9ba78e6d1053e8dfa092eb926e8d5900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec706dec4072d385d7ec437c6f9560e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec706dec4072d385d7ec437c6f9560e8"></a>
 static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ENC_TICKS_PER_TURN</b> = 2048 * 3</td></tr>
 <tr class="separator:aec706dec4072d385d7ec437c6f9560e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,7 +213,7 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ENC_
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/control/modules/control/<a class="el" href="_pid_motion_controller_8hpp_source.html">PidMotionController.hpp</a></li>
+<li>src/control/modules/motion-control/<a class="el" href="_pid_motion_controller_8hpp_source.html">PidMotionController.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -246,7 +221,7 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ENC_
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_pid_motion_controller.html">PidMotionController</a></li>
-    <li class="footer">Generated on Fri May 25 2018 22:19:23 for GT RoboCup SSL by
+    <li class="footer">Generated on Sat May 26 2018 17:58:56 for GT RoboCup SSL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

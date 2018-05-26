@@ -9,10 +9,8 @@ var hierarchy =
     [ "command_t", "structcommand__t.html", null ],
     [ "CommModule", "class_comm_module.html", null ],
     [ "CommPort< RX_CALLBACK, TX_CALLBACK >", "class_comm_port.html", null ],
-    [ "rtp::ConfMessage", "structrtp_1_1_conf_message.html", null ],
     [ "Console", "class_console.html", null ],
     [ "rtp::ControlMessage", "structrtp_1_1_control_message.html", null ],
-    [ "rtp::DebugMessage", "structrtp_1_1_debug_message.html", null ],
     [ "MbedTest::DigitalIn", "class_mbed_test_1_1_digital_in.html", null ],
     [ "DS2411_t", "struct_d_s2411__t.html", null ],
     [ "dw1000_api", "classdw1000__api.html", [
@@ -85,10 +83,10 @@ var hierarchy =
       [ "FPGA", "class_f_p_g_a.html", null ]
     ] ],
     [ "SoftwareSPI", "class_software_s_p_i.html", null ],
+    [ "MbedTest::SPI", "class_mbed_test_1_1_s_p_i.html", null ],
     [ "SPI", null, [
       [ "SharedSPI", "class_shared_s_p_i.html", null ]
     ] ],
-    [ "MbedTest::SPI", "class_mbed_test_1_1_s_p_i.html", null ],
     [ "StallDetection< Stall_kSpeed, Stall_kCommand, Stall_Threshold, Stall_Decay, Stall_Deadband >", "class_stall_detection.html", null ],
     [ "TimeoutLED", "class_timeout_l_e_d.html", [
       [ "FlashingTimeoutLED", "class_flashing_timeout_l_e_d.html", null ],

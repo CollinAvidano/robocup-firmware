@@ -7,9 +7,7 @@ var annotated_dup =
     ] ],
     [ "MbedTest", "namespace_mbed_test.html", "namespace_mbed_test" ],
     [ "rtp", null, [
-      [ "ConfMessage", "structrtp_1_1_conf_message.html", "structrtp_1_1_conf_message" ],
       [ "ControlMessage", "structrtp_1_1_control_message.html", "structrtp_1_1_control_message" ],
-      [ "DebugMessage", "structrtp_1_1_debug_message.html", "structrtp_1_1_debug_message" ],
       [ "Header", "structrtp_1_1_header.html", "structrtp_1_1_header" ],
       [ "Packet", "classrtp_1_1_packet.html", "classrtp_1_1_packet" ],
       [ "RobotStatusMessage", "structrtp_1_1_robot_status_message.html", "structrtp_1_1_robot_status_message" ],
