@@ -16,6 +16,7 @@ var annotated_dup =
     [ "agc_cfg_struct", "structagc__cfg__struct.html", "structagc__cfg__struct" ],
     [ "AVR910", "class_a_v_r910.html", "class_a_v_r910" ],
     [ "BallSensor", "class_ball_sensor.html", "class_ball_sensor" ],
+    [ "Battery", "class_battery.html", "class_battery" ],
     [ "Buzzer", "class_buzzer.html", "class_buzzer" ],
     [ "CC1201", "class_c_c1201.html", "class_c_c1201" ],
     [ "command_t", "structcommand__t.html", "structcommand__t" ],

@@ -5,6 +5,7 @@ var hierarchy =
       [ "Buzzer", "class_buzzer.html", null ]
     ] ],
     [ "BallSensor", "class_ball_sensor.html", null ],
+    [ "Battery", "class_battery.html", null ],
     [ "mbed::I2CDriver::Channel", "structmbed_1_1_i2_c_driver_1_1_channel.html", null ],
     [ "command_t", "structcommand__t.html", null ],
     [ "CommModule", "class_comm_module.html", null ],
@@ -64,8 +65,8 @@ var hierarchy =
     [ "RobotModel", "class_robot_model.html", null ],
     [ "rtp::RobotStatusMessage", "structrtp_1_1_robot_status_message.html", null ],
     [ "rtp::RobotTxMessage", "structrtp_1_1_robot_tx_message.html", null ],
-    [ "RobotTxMessages", "union_robot_tx_messages.html", null ],
     [ "rtp::RobotTxMessage::RobotTxMessages", "unionrtp_1_1_robot_tx_message_1_1_robot_tx_messages.html", null ],
+    [ "RobotTxMessages", "union_robot_tx_messages.html", null ],
     [ "RotarySelector< DIGITAL_IN, NUM_PINS >", "class_rotary_selector.html", null ],
     [ "RtosTimer", null, [
       [ "RtosTimerHelper", "class_rtos_timer_helper.html", null ]
@@ -83,10 +84,10 @@ var hierarchy =
       [ "FPGA", "class_f_p_g_a.html", null ]
     ] ],
     [ "SoftwareSPI", "class_software_s_p_i.html", null ],
-    [ "MbedTest::SPI", "class_mbed_test_1_1_s_p_i.html", null ],
     [ "SPI", null, [
       [ "SharedSPI", "class_shared_s_p_i.html", null ]
     ] ],
+    [ "MbedTest::SPI", "class_mbed_test_1_1_s_p_i.html", null ],
     [ "StallDetection< Stall_kSpeed, Stall_kCommand, Stall_Threshold, Stall_Decay, Stall_Deadband >", "class_stall_detection.html", null ],
     [ "TimeoutLED", "class_timeout_l_e_d.html", [
       [ "FlashingTimeoutLED", "class_flashing_timeout_l_e_d.html", null ],

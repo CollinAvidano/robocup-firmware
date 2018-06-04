@@ -12,6 +12,7 @@ var searchData=
   ['instancecount',['instanceCount',['../class_console.html#a1f5150241adfdce2a182c631f9b1a644',1,'Console']]],
   ['ioexpanderdigitalinout',['IOExpanderDigitalInOut',['../class_i_o_expander_digital_in_out.html',1,'IOExpanderDigitalInOut'],['../class_i_o_expander_digital_in_out.html#a83c8b6dc7331ab3cd6b8fb24bcb213b3',1,'IOExpanderDigitalInOut::IOExpanderDigitalInOut()']]],
   ['is_5fiterative',['is_iterative',['../structcommand__t.html#a816cc17fd5afbb6e347a1e45ff898fa7',1,'command_t']]],
+  ['isbattcritical',['isBattCritical',['../class_battery.html#afb3dd22b444cb281d76e187a92ce8ec1',1,'Battery']]],
   ['isconnected',['isConnected',['../class_c_c1201.html#a6e38428d0ef057b215bb89c5b327a213',1,'CC1201::isConnected()'],['../class_decawave.html#a2a67d261a5f2cc0d7381cc18075480e4',1,'Decawave::isConnected()'],['../class_comm_link.html#a518b5e89a19177696fd1f037ac37e99f',1,'CommLink::isConnected()'],['../class_dummy_link.html#a628bed670ad8fd641efa6c8cc987af7b',1,'DummyLink::isConnected()']]],
   ['isr',['ISR',['../class_comm_link.html#a288c3410e4911738eb088e23817f9356',1,'CommLink']]],
   ['isready',['isReady',['../class_comm_module.html#ae7cbe399c4c04213765259b92afe3987',1,'CommModule']]],
