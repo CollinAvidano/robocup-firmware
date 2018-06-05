@@ -51,6 +51,10 @@ void Task_Controller_UpdateTarget(Eigen::Vector3f targetVel) {
         commandTimeoutTimer->start(COMMAND_TIMEOUT_INTERVAL);
 }
 
+void Task_Controller_UpdateGains(float kp, float ki) {
+    controller.updateGains(kp, ki);
+}
+
 constexpr uint8_t DRIBBLER_SPEED_UPPERBOUND = 128;
 constexpr uint8_t DRIBBLER_SPEED_LOWERBOUND = 0;
 constexpr float DRIBBLER_FULL_RAMP_TIME_MS = 500;
@@ -63,6 +67,10 @@ uint8_t dribblerSpeed = 0;
 uint8_t dribblerSpeedSetPoint = 0;
 void Task_Controller_UpdateDribbler(uint8_t dribbler) {
     dribblerSpeedSetPoint = dribbler;
+}
+
+float Task_Controller_GetError() {
+    return controller.getError();
 }
 
 /**

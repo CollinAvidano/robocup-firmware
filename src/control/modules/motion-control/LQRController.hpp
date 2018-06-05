@@ -2,73 +2,96 @@
 
 #include <rc-fshare/robot_model.hpp>
 
-// This is an "offline" LQR controller because the calculations for finding
-// the gain matrix, K, are done offline (at compile time) and stored in a
-// lookup table.  Calculating K on the MBED would be very slow...
+// This isn't LQR anymore. Change name soon.
 class LQRController {
-   public:
+public:
     void setTargetVel(Eigen::Vector3f target) { _targetVel = target; }
-    /// Weighting matrices for the LQR cost function.
-    //
-    // LQR gain matrix.
-    // typedef Eigen::Matrix<float, 4, 3> KType;
 
+    void updateGains(float kp, float ki) {
+        _kp = kp;
+        _ki = ki;
+    }
 
-    /// u = -K*(currVel-cmdVel) - pinv(B)*A*cmdVel
+    float getError() {
+        return _dbg_error;
+    }
+
     std::array<int16_t, 4> run(const std::array<int16_t, 4>& encoderDeltas, float dt)
     {
-
-        // get wheel velocities from encoder readings
-        // we should probably build a proper estimator rather than taking the
-        // lastest measurement as truth, but this will do for now
+        // State estimate
         Eigen::Matrix<double, 4, 1> wheelVels;
-        wheelVels << encoderDeltas[0], encoderDeltas[1], encoderDeltas[2],
+        wheelVels << 
+            encoderDeltas[0],
+            encoderDeltas[1],
+            encoderDeltas[2],
             encoderDeltas[3];
+
+        constexpr auto ENC_TICKS_PER_TURN = 2048 * 3;
         wheelVels *= 2.0 * M_PI / ENC_TICKS_PER_TURN / dt;
 
+        auto alpha = 1.0; // high = trust new data more
+
+        _wheelVels = (1 - alpha) * _wheelVels + alpha * wheelVels;
+
+        // Target matrix
         Eigen::Matrix<double, 3, 1> target_mat;
         target_mat << _targetVel[0], _targetVel[1], _targetVel[2];
         Eigen::Matrix<double, 4, 1> targetWheelVels =
             RobotModel::get().BotToWheel * target_mat;
 
-        // printf("Target: %f %f %f\r\n", _targetVel[0], _targetVel[1], _targetVel[2]);
-        // auto steadyStateTerm = -(RobotModel::get().PinvB * RobotModel::get().A * targetWheelVels);
-        // auto correctionTerm = -RobotModel::get().K * (wheelVels - targetWheelVels);
-        // Eigen::Matrix<double, 4, 1> controlValues =  correctionTerm + steadyStateTerm;
+        // Error calculation
+        Eigen::Matrix<double, 4, 1> error = targetWheelVels - _wheelVels;
 
-        auto error = targetWheelVels - wheelVels;
+        _dbg_error = error(0,0);
+
+        // Update integrator
         _wheelVelErrors += error * dt;
-        // _wheelVelErrors *= 0;
 
-        // Eigen::Matrix combined_state;
-        Eigen::Matrix<double, 8, 1> combined_state;
-        combined_state << wheelVels,
-                          _wheelVelErrors;
+        // Calculate error torque
+        auto kp = _kp;
+        auto ki = _ki;
+        auto torque_e = kp * error + ki * _wheelVelErrors;
 
-        // printf("Combined state made\r\n");
-        Eigen::Matrix<double, 4, 1> control_v = -RobotModel::get().K * combined_state;
-        // printf("Control v calculated\r\n");
+        constexpr auto milli_to_si = 1.0 / 1000;
+        constexpr auto km = 25.1 * milli_to_si; // mNm / A -> Nm / A
+        constexpr auto R = 0.464; // ohm
 
-        // control_v += controlValues;
+        constexpr auto rpm_rad_s = 2.0*M_PI / 60.0; // rpm -> rad/s
+        constexpr auto kn = 380 * rpm_rad_s; // rpm / V -> (rad/s) / V
+        const auto vcc = RobotModel::get().V_Max;
+
         std::array<int16_t, 4> control_duties;
-        // limit output voltages to V_max
         for (std::size_t i = 0; i < control_duties.size(); ++i) {
-            if (abs(control_v(i, 1)) > RobotModel::get().V_Max) {
-                control_v(i,1) = copysign(RobotModel::get().V_Max, control_v(i,1));
-            }
-            control_duties[i] = control_v(i,1) * FPGA::MAX_DUTY_CYCLE / RobotModel::get().V_Max;
+
+            double wheel_vel = _wheelVels(i,0);
+            printf("wheel_vel: %f\r\n", _wheelVels(i,0));
+            // http://wiki.robocup.org/images/e/ef/Small_Size_League_-_RoboCup_2009_-_ETDP_Skuba.pdf
+            auto torque_m = (km / R) * vcc - (km / (R * kn)) * wheel_vel;
+            auto te = torque_e(i,0);
+            printf("te: %f\r\n", te);
+
+            auto control_v = te / torque_m;
+
+            if (abs(control_v) > vcc) control_v = copysign(vcc, control_v);
+
+            // convert voltage to duty cycle
+            double dc = control_v * FPGA::MAX_DUTY_CYCLE / vcc;
+            control_duties[i] = static_cast<int16_t>(dc);
         }
-        // printf("Duties: %d %d %d %d\r\n", control_duties[0], control_duties[1], control_duties[2], control_duties[3]);
+
+        printf("Control duties: %d %d %d %d\r\n",
+               control_duties[0], control_duties[1],
+               control_duties[2], control_duties[3]);
 
         return control_duties;
     }
 
-   private:
+private:
     Eigen::Vector3f _targetVel{};
     Eigen::Matrix<double, 4, 1> _wheelVelErrors = {0, 0, 0, 0};
+    Eigen::Matrix<double, 4, 1> _wheelVels = {0, 0, 0, 0};
 
-    // Eigen::Matrix<double, 4, 1> control_v = {0, 0, 0, 0};
-
-    // Refactor to use this info from robot model in the future
-    static const uint16_t ENC_TICKS_PER_TURN = 2048 * 3;
+    float _kp;
+    float _ki;
+    float _dbg_error;
 };

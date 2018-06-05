@@ -76,6 +76,8 @@ void Task_Controller(const void* args);
 void Task_Controller_UpdateTarget(Eigen::Vector3f targetVel);
 void Task_Controller_UpdateDribbler(uint8_t dribbler);
 std::array<int16_t, 4> Task_Controller_EncGetClear();
+void Task_Controller_UpdateGains(float kp, float ki);
+float Task_Controller_GetError();
 void InitializeCommModule(SharedSPIDevice<>::SpiPtrT sharedSPI);
 
 extern std::array<WheelStallDetection, 4> wheelStallDetection;
@@ -317,6 +319,9 @@ int main() {
                         rtp::ControlMessage::VELOCITY_SCALE_FACTOR,
                 });
 
+                // Update gains
+                Task_Controller_UpdateGains(msg->kp, msg->ki);
+
                 // dribbler
                 Task_Controller_UpdateDribbler(msg->dribbler);
 
@@ -344,6 +349,8 @@ int main() {
             reply.uid = robotShellID;
             reply.battVoltage = battVoltage;
             reply.ballSenseStatus = KickerBoard::Instance->isBallSensed();
+
+            reply.error = Task_Controller_GetError();
 
             // report any motor errors
             reply.motorErrors = 0;
