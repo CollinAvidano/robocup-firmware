@@ -75,7 +75,7 @@ void Task_Simulate_RX_Packet(const void* args) {
 #endif
 
 void Task_Controller(const void* args);
-void Task_Controller_UpdateTarget(Eigen::Vector3f targetVel);
+void Task_Controller_UpdateTarget(Eigen::Vector3f targetVel, float target_rot);
 void Task_Controller_UpdateDribbler(uint8_t dribbler);
 void Task_Controller_UpdateOffsets(int16_t ax, int16_t ay, int16_t az,
                                    int16_t gx, int16_t gy, int16_t gz);
@@ -340,13 +340,15 @@ int main() {
             if (addressed) {
                 // update target velocity from packet
                 Task_Controller_UpdateTarget({
-                    static_cast<float>(msg->bodyX) /
+                    static_cast<float>(msg->worldX) /
                         rtp::ControlMessage::VELOCITY_SCALE_FACTOR,
-                    static_cast<float>(msg->bodyY) /
+                    static_cast<float>(msg->worldY) /
                         rtp::ControlMessage::VELOCITY_SCALE_FACTOR,
-                    static_cast<float>(msg->bodyW) /
+                    static_cast<float>(msg->W) /
                         rtp::ControlMessage::VELOCITY_SCALE_FACTOR,
-                });
+                },
+                static_cast<float>(msg->visRotEst) / rtp::ControlMessage::ROTATION_SCALE_FACTOR
+                );
 
                 // dribbler
                 Task_Controller_UpdateDribbler(msg->dribbler);

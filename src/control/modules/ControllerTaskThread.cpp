@@ -40,7 +40,10 @@ bool commandTimedOut = true;
 
 std::array<int16_t, 4> enc_counts = {0, 0, 0, 0};
 
-void Task_Controller_UpdateTarget(Eigen::Vector3f targetVel) {
+float cur_target_rot = 0.0f;
+
+void Task_Controller_UpdateTarget(Eigen::Vector3f targetVel, float target_rot) {
+    cur_target_rot = target_rot;
     pidController.setTargetVel(targetVel);
 
     // reset timeout
@@ -190,7 +193,7 @@ void Task_Controller(const void* args) {
         // run PID controller to determine what duty cycles to use to drive the
         // motors.
         std::array<int16_t, 4> driveMotorDutyCycles = pidController.run(
-            driveMotorEnc, dt, &errors, &wheelVelsOut, &targetWheelVelsOut);
+            driveMotorEnc, cur_target_rot, dt, &errors, &wheelVelsOut, &targetWheelVelsOut);
 
         // assign the duty cycles, zero out motors that the fpga returns an
         // error for

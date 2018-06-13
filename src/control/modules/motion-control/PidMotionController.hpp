@@ -84,6 +84,7 @@ public:
      * @return Duty cycle values for each of the 4 motors
      */
     std::array<int16_t, 4> run(const std::array<int16_t, 4>& encoderDeltas,
+                               float vis_rotation,
                                float dt, Eigen::Vector4d* errors = nullptr,
                                Eigen::Vector4d* wheelVelsOut = nullptr,
                                Eigen::Vector4d* targetWheelVelsOut = nullptr) {
@@ -213,6 +214,6 @@ private:
     float rotation; // state estimate for rotation
     // We want to preserve the interface of soccer commanding rotational velocities
     // for now, so that requires us to have a separate estimate of soccer's desired rotation
-    float target_rotation;
     float angular_vel;
+    float target_rotation;
 };
