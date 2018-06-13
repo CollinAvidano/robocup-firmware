@@ -121,6 +121,9 @@ public:
         // current rotation estimate
         rotation += angular_vel * dt;
 
+        float target_alpha = 0.01;
+        rotation = target_alpha * vis_rotation + (1 - target_alpha) * rotation;
+
         // printf("%f\r\n", rotation * 180.0f / M_PI);
 
         auto target_vel_act = _targetVel;
