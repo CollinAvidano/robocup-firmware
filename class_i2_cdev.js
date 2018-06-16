@@ -1,7 +1,6 @@
 var class_i2_cdev =
 [
-    [ "I2Cdev", "class_i2_cdev.html#a0a466e2323d9f719a1ecc9fa11ac5c84", null ],
-    [ "I2Cdev", "class_i2_cdev.html#ace7906a8c8041d6917c4699763178eea", null ],
+    [ "I2Cdev", "class_i2_cdev.html#a8ba2804fe396fb0b4fbfb56a62ef5c8f", null ],
     [ "readBit", "class_i2_cdev.html#a9f104431c59658432e8b2f02c3e1acd6", null ],
     [ "readBits", "class_i2_cdev.html#ab507de3d1a8f9e1528038ed2b2301d31", null ],
     [ "readBitsW", "class_i2_cdev.html#afbeeb8ece31be866c9d7169ae1d91f6b", null ],

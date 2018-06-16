@@ -1,7 +1,7 @@
 var searchData=
 [
   ['i2cdriver',['I2CDriver',['../classmbed_1_1_i2_c_driver.html#ab1003b9c2954e40e601eff790d27ca75',1,'mbed::I2CDriver']]],
-  ['i2cmasterrtos',['I2CMasterRtos',['../classmbed_1_1_i2_c_master_rtos.html#ae440e46e9f31b0b9275f62e6fda76dba',1,'mbed::I2CMasterRtos']]],
+  ['i2cmasterrtos',['I2CMasterRtos',['../classmbed_1_1_i2_c_master_rtos.html#acef86904ed1977d4632d93e301a8ad25',1,'mbed::I2CMasterRtos']]],
   ['i2cslavertos',['I2CSlaveRtos',['../classmbed_1_1_i2_c_slave_rtos.html#ae37089c395a991200ad70b371d166890',1,'mbed::I2CSlaveRtos']]],
   ['initialize',['initialize',['../class_m_p_u6050.html#abd8fc6c18adf158011118fbccc7e7054',1,'MPU6050']]],
   ['ioexpanderdigitalinout',['IOExpanderDigitalInOut',['../class_i_o_expander_digital_in_out.html#a83c8b6dc7331ab3cd6b8fb24bcb213b3',1,'IOExpanderDigitalInOut']]],

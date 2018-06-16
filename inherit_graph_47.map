@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$class_shared_s_p_i.html" title="A simple wrapper over mbed&#39;s SPI class that includes a mutex. " alt="" coords="115,31,203,57"/>
+<area shape="rect" id="node1" href="$class_shared_i2_c_device.html" title="SharedI2CDevice" alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node2" href="$classmbed_1_1_i2_c_master_rtos.html" title="I2C master interface to the RTOS&#45;I2CDriver. " alt="" coords="184,5,343,32"/>
 </map>

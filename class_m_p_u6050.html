@@ -118,12 +118,12 @@ $(document).ready(function(){initNavTree('class_m_p_u6050.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7c0146d45537e4bd7a0d4c1c476fdab7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_p_u6050.html#a7c0146d45537e4bd7a0d4c1c476fdab7">MPU6050</a> ()</td></tr>
-<tr class="memdesc:a7c0146d45537e4bd7a0d4c1c476fdab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor, uses default I2C address.  <a href="#a7c0146d45537e4bd7a0d4c1c476fdab7">More...</a><br /></td></tr>
-<tr class="separator:a7c0146d45537e4bd7a0d4c1c476fdab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17ebd2f8888a3999d43106228f0fccca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_p_u6050.html#a17ebd2f8888a3999d43106228f0fccca">MPU6050</a> (uint8_t address, PinName i2cSda, PinName i2cScl)</td></tr>
-<tr class="memdesc:a17ebd2f8888a3999d43106228f0fccca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specific address constructor.  <a href="#a17ebd2f8888a3999d43106228f0fccca">More...</a><br /></td></tr>
-<tr class="separator:a17ebd2f8888a3999d43106228f0fccca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355e47710cd46aa58b3b3ef55c90e63c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_p_u6050.html#a355e47710cd46aa58b3b3ef55c90e63c">MPU6050</a> (std::shared_ptr&lt; <a class="el" href="class_shared_i2_c.html">SharedI2C</a> &gt; sharedI2C)</td></tr>
+<tr class="memdesc:a355e47710cd46aa58b3b3ef55c90e63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor, uses default I2C address.  <a href="#a355e47710cd46aa58b3b3ef55c90e63c">More...</a><br /></td></tr>
+<tr class="separator:a355e47710cd46aa58b3b3ef55c90e63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730c129420b571fa771e6d3f98fb6337"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_p_u6050.html#a730c129420b571fa771e6d3f98fb6337">MPU6050</a> (std::shared_ptr&lt; <a class="el" href="class_shared_i2_c.html">SharedI2C</a> &gt; sharedI2C, uint8_t address)</td></tr>
+<tr class="memdesc:a730c129420b571fa771e6d3f98fb6337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specific address constructor.  <a href="#a730c129420b571fa771e6d3f98fb6337">More...</a><br /></td></tr>
+<tr class="separator:a730c129420b571fa771e6d3f98fb6337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd8fc6c18adf158011118fbccc7e7054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_p_u6050.html#abd8fc6c18adf158011118fbccc7e7054">initialize</a> ()</td></tr>
 <tr class="memdesc:abd8fc6c18adf158011118fbccc7e7054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power on and prepare for general usage.  <a href="#abd8fc6c18adf158011118fbccc7e7054">More...</a><br /></td></tr>
 <tr class="separator:abd8fc6c18adf158011118fbccc7e7054"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -904,14 +904,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setDMPConfig2</b> (ui
 <tr class="separator:aea90c3e6a6666f070f7833a913cfa821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a7c0146d45537e4bd7a0d4c1c476fdab7"></a>
+<a class="anchor" id="a355e47710cd46aa58b3b3ef55c90e63c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">MPU6050::MPU6050 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_shared_i2_c.html">SharedI2C</a> &gt;&#160;</td>
+          <td class="paramname"><em>sharedI2C</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -922,27 +923,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setDMPConfig2</b> (ui
 
 </div>
 </div>
-<a class="anchor" id="a17ebd2f8888a3999d43106228f0fccca"></a>
+<a class="anchor" id="a730c129420b571fa771e6d3f98fb6337"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">MPU6050::MPU6050 </td>
           <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_shared_i2_c.html">SharedI2C</a> &gt;&#160;</td>
+          <td class="paramname"><em>sharedI2C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>address</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PinName&#160;</td>
-          <td class="paramname"><em>sda</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PinName&#160;</td>
-          <td class="paramname"><em>scl</em>&#160;</td>
+          <td class="paramname"><em>address</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3860,17 +3855,17 @@ MPU6050_INTCFG_CLKOUT_EN_BIT </dd></dl>
 <p>An internal 8MHz oscillator, gyroscope based clock, or external sources can be selected as the MPU-60X0 clock source. When the internal 8 MHz oscillator or an external source is chosen as the clock source, the MPU-60X0 can operate in low power modes with the gyroscopes disabled.</p>
 <p>Upon power up, the MPU-60X0 clock source defaults to the internal oscillator. However, it is highly recommended that the device be configured to use one of the gyroscopes (or an external clock source) as the clock reference for improved stability. The clock source can be selected according to the following table:</p>
 <pre>
-CLK_SEL | Clock Source
---------+--------------------------------------
-0       | Internal oscillator
-1       | PLL with X Gyro reference
-2       | PLL with Y Gyro reference
-3       | PLL with Z Gyro reference
-4       | PLL with external 32.768kHz reference
-5       | PLL with external 19.2MHz reference
-6       | Reserved
-7       | Stops the clock and keeps the timing generator in reset
-</pre><dl class="params"><dt>Parameters</dt><dd>
+ CLK_SEL | Clock Source
+ --------+--------------------------------------
+ 0       | Internal oscillator
+ 1       | PLL with X Gyro reference
+ 2       | PLL with Y Gyro reference
+ 3       | PLL with Z Gyro reference
+ 4       | PLL with external 32.768kHz reference
+ 5       | PLL with external 19.2MHz reference
+ 6       | Reserved
+ 7       | Stops the clock and keeps the timing generator in reset
+ </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">source</td><td>New clock source setting </td></tr>
   </table>
@@ -5730,7 +5725,7 @@ MPU6050_RA_FIFO_EN </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_m_p_u6050.html">MPU6050</a></li>
-    <li class="footer">Generated on Tue Jun 12 2018 04:44:31 for GT RoboCup SSL by
+    <li class="footer">Generated on Sat Jun 16 2018 19:44:49 for GT RoboCup SSL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

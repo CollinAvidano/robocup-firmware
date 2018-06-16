@@ -27,7 +27,9 @@ var hierarchy =
     [ "rtp::Header", "structrtp_1_1_header.html", null ],
     [ "I2Cdev", "class_i2_cdev.html", null ],
     [ "mbed::I2CDriver", "classmbed_1_1_i2_c_driver.html", null ],
-    [ "mbed::I2CMasterRtos", "classmbed_1_1_i2_c_master_rtos.html", null ],
+    [ "I2CDriver", null, [
+      [ "SharedI2C", "class_shared_i2_c.html", null ]
+    ] ],
     [ "mbed::I2CSlaveRtos", "classmbed_1_1_i2_c_slave_rtos.html", null ],
     [ "IOExpanderDigitalInOut", "class_i_o_expander_digital_in_out.html", null ],
     [ "std::ios_base", null, [
@@ -71,6 +73,9 @@ var hierarchy =
     [ "RtosTimer", null, [
       [ "RtosTimerHelper", "class_rtos_timer_helper.html", null ]
     ] ],
+    [ "SharedI2CDevice", "class_shared_i2_c_device.html", [
+      [ "mbed::I2CMasterRtos", "classmbed_1_1_i2_c_master_rtos.html", null ]
+    ] ],
     [ "SharedSPIDevice< DIGITAL_OUT >", "class_shared_s_p_i_device.html", null ],
     [ "SharedSPIDevice<>", "class_shared_s_p_i_device.html", [
       [ "AVR910", "class_a_v_r910.html", [
@@ -84,10 +89,10 @@ var hierarchy =
       [ "FPGA", "class_f_p_g_a.html", null ]
     ] ],
     [ "SoftwareSPI", "class_software_s_p_i.html", null ],
+    [ "MbedTest::SPI", "class_mbed_test_1_1_s_p_i.html", null ],
     [ "SPI", null, [
       [ "SharedSPI", "class_shared_s_p_i.html", null ]
     ] ],
-    [ "MbedTest::SPI", "class_mbed_test_1_1_s_p_i.html", null ],
     [ "StallDetection< Stall_kSpeed, Stall_kCommand, Stall_Threshold, Stall_Decay, Stall_Deadband >", "class_stall_detection.html", null ],
     [ "TimeoutLED", "class_timeout_l_e_d.html", [
       [ "FlashingTimeoutLED", "class_flashing_timeout_l_e_d.html", null ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX8 =
 {
+"structmbed_1_1_i2_c_driver_1_1_channel.html#a88b723a296b7af978f3efc9ce085ac98":[2,0,0,0,0,2],
+"structmbed_1_1_i2_c_driver_1_1_channel.html#a96ffa8499371d8dc37bcf1a35af47909":[2,0,0,0,0,0],
+"structmbed_1_1_i2_c_driver_1_1_channel.html#ac5a8976925875108860c244ab2f1acb9":[2,0,0,0,0,3],
+"structmbed_1_1_i2_c_driver_1_1_channel.html#ae73c0eff405e285e09b75bc83198bb95":[2,0,0,0,0,5],
+"structmbed_1_1_i2_c_driver_1_1_channel.html#aeb61a2647c63a69a9a581e8bc8cd509d":[2,0,0,0,0,6],
+"structmbed_1_1_i2_c_driver_1_1_channel.html#af3de51deec098c8b690ad65e0963c1d2":[2,0,0,0,0,4],
 "structmbed_1_1_i2_c_driver_1_1_channel.html#afe9372687170e694f23f3d0a4a042a23":[2,0,0,0,0,1],
 "structmotor__t.html":[2,0,32],
 "structmotor__t.html#a156c61edb0ae90f8442aa8524945569e":[2,0,32,1],

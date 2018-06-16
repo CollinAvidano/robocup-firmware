@@ -35,7 +35,7 @@ var class_m_c_p23017 =
       [ "GPIO", "class_m_c_p23017.html#a3f402d0f5722dfbbfca400a36bc5d66eaa8183b3f551054634a6311a4b1c9a0ff", null ],
       [ "OLAT", "class_m_c_p23017.html#a3f402d0f5722dfbbfca400a36bc5d66ea6dc8984ebc275cf9081c7be0730a657f", null ]
     ] ],
-    [ "MCP23017", "class_m_c_p23017.html#ac450a05ecaec8a1d29c723aef263b014", null ],
+    [ "MCP23017", "class_m_c_p23017.html#a4efb47053c915bedb13b86cb44e821d1", null ],
     [ "config", "class_m_c_p23017.html#a0012ecd9ece2bbe2f1ac473abf76fe29", null ],
     [ "digitalRead", "class_m_c_p23017.html#af329a9def6704f71efa586687155bd26", null ],
     [ "digitalWordRead", "class_m_c_p23017.html#abd2401da8537875428522c181ecd9769", null ],

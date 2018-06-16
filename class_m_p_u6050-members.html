@@ -258,8 +258,8 @@ $(document).ready(function(){initNavTree('class_m_p_u6050.html','');});
   <tr class="even"><td class="entry"><a class="el" href="class_m_p_u6050.html#a3601b732eb15644212b8f29cf396e142">getZNegMotionDetected</a>()</td><td class="entry"><a class="el" href="class_m_p_u6050.html">MPU6050</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_m_p_u6050.html#a33c766cd415fc5780417b1ed76717875">getZPosMotionDetected</a>()</td><td class="entry"><a class="el" href="class_m_p_u6050.html">MPU6050</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_m_p_u6050.html#abd8fc6c18adf158011118fbccc7e7054">initialize</a>()</td><td class="entry"><a class="el" href="class_m_p_u6050.html">MPU6050</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_m_p_u6050.html#a7c0146d45537e4bd7a0d4c1c476fdab7">MPU6050</a>()</td><td class="entry"><a class="el" href="class_m_p_u6050.html">MPU6050</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_m_p_u6050.html#a17ebd2f8888a3999d43106228f0fccca">MPU6050</a>(uint8_t address, PinName i2cSda, PinName i2cScl)</td><td class="entry"><a class="el" href="class_m_p_u6050.html">MPU6050</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_m_p_u6050.html#a355e47710cd46aa58b3b3ef55c90e63c">MPU6050</a>(std::shared_ptr&lt; SharedI2C &gt; sharedI2C)</td><td class="entry"><a class="el" href="class_m_p_u6050.html">MPU6050</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_m_p_u6050.html#a730c129420b571fa771e6d3f98fb6337">MPU6050</a>(std::shared_ptr&lt; SharedI2C &gt; sharedI2C, uint8_t address)</td><td class="entry"><a class="el" href="class_m_p_u6050.html">MPU6050</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>readMemoryBlock</b>(uint8_t *data, uint16_t dataSize, uint8_t bank=0, uint8_t address=0) (defined in <a class="el" href="class_m_p_u6050.html">MPU6050</a>)</td><td class="entry"><a class="el" href="class_m_p_u6050.html">MPU6050</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>readMemoryByte</b>() (defined in <a class="el" href="class_m_p_u6050.html">MPU6050</a>)</td><td class="entry"><a class="el" href="class_m_p_u6050.html">MPU6050</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_m_p_u6050.html#a7100b6d276c3c8664cf00d768b7b0dee">reset</a>()</td><td class="entry"><a class="el" href="class_m_p_u6050.html">MPU6050</a></td><td class="entry"></td></tr>
@@ -381,7 +381,7 @@ $(document).ready(function(){initNavTree('class_m_p_u6050.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jun 12 2018 04:44:31 for GT RoboCup SSL by
+    <li class="footer">Generated on Sat Jun 16 2018 19:44:49 for GT RoboCup SSL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

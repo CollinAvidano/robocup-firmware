@@ -1,7 +1,7 @@
 var class_m_p_u6050 =
 [
-    [ "MPU6050", "class_m_p_u6050.html#a7c0146d45537e4bd7a0d4c1c476fdab7", null ],
-    [ "MPU6050", "class_m_p_u6050.html#a17ebd2f8888a3999d43106228f0fccca", null ],
+    [ "MPU6050", "class_m_p_u6050.html#a355e47710cd46aa58b3b3ef55c90e63c", null ],
+    [ "MPU6050", "class_m_p_u6050.html#a730c129420b571fa771e6d3f98fb6337", null ],
     [ "getAcceleration", "class_m_p_u6050.html#a658dfc7e35b7fdba360a75f137bde33a", null ],
     [ "getAccelerationX", "class_m_p_u6050.html#aa68475158c22128e5459c4c5e19439dc", null ],
     [ "getAccelerationY", "class_m_p_u6050.html#a27240b90d3e03c85b7a619b794bb1756", null ],

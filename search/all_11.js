@@ -89,6 +89,8 @@ var searchData=
   ['setzeromotiondetectionthreshold',['setZeroMotionDetectionThreshold',['../class_m_p_u6050.html#a347a51fd25de20b9ead4659015ef793b',1,'MPU6050']]],
   ['setzgyrofifoenabled',['setZGyroFIFOEnabled',['../class_m_p_u6050.html#af5b5bc39b66466ba910f6eef1259444c',1,'MPU6050']]],
   ['sfdto',['sfdTO',['../structdwt__config__t.html#a3e02b0ef49a41cdfef4c090c75b21098',1,'dwt_config_t']]],
+  ['sharedi2c',['SharedI2C',['../class_shared_i2_c.html',1,'']]],
+  ['sharedi2cdevice',['SharedI2CDevice',['../class_shared_i2_c_device.html',1,'']]],
   ['sharedspi',['SharedSPI',['../class_shared_s_p_i.html',1,'']]],
   ['sharedspidevice',['SharedSPIDevice',['../class_shared_s_p_i_device.html',1,'']]],
   ['sharedspidevice_3c_3e',['SharedSPIDevice&lt;&gt;',['../class_shared_s_p_i_device.html',1,'']]],

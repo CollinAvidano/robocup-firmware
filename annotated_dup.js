@@ -56,6 +56,8 @@ var annotated_dup =
     [ "RobotTxMessages", "union_robot_tx_messages.html", "union_robot_tx_messages" ],
     [ "RotarySelector", "class_rotary_selector.html", "class_rotary_selector" ],
     [ "RtosTimerHelper", "class_rtos_timer_helper.html", "class_rtos_timer_helper" ],
+    [ "SharedI2C", "class_shared_i2_c.html", "class_shared_i2_c" ],
+    [ "SharedI2CDevice", "class_shared_i2_c_device.html", "class_shared_i2_c_device" ],
     [ "SharedSPI", "class_shared_s_p_i.html", "class_shared_s_p_i" ],
     [ "SharedSPIDevice", "class_shared_s_p_i_device.html", "class_shared_s_p_i_device" ],
     [ "SoftwareSPI", "class_software_s_p_i.html", "class_software_s_p_i" ],
