@@ -75,7 +75,7 @@ void Task_Simulate_RX_Packet(const void* args) {
 
 void Task_Controller(const void* args);
 void Task_Controller_UpdateTarget(Eigen::Vector3f targetVel);
-void Task_Controller_UpdateDribbler(uint8_t dribbler);
+void Task_Controller_UpdateDribbler(uint16_t dribbler);
 std::array<int16_t, 4> Task_Controller_EncGetClear();
 void InitializeCommModule(SharedSPIDevice<>::SpiPtrT sharedSPI);
 
@@ -318,7 +318,7 @@ int main() {
                 });
 
                 // dribbler
-                Task_Controller_UpdateDribbler(msg->dribbler);
+                Task_Controller_UpdateDribbler(msg->dribbler * rtp::ControlMessage::DRIBBLER_SCALE_FACTOR);
 
                 if (msg->triggerMode == 0) {
                     KickerBoard::Instance->cancelBreakbeam();

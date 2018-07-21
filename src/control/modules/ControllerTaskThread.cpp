@@ -59,7 +59,7 @@ constexpr uint8_t DRIBBLER_MAX_DELTAV_PER_ITER = static_cast<uint8_t>(
 
 uint8_t dribblerSpeed = 0;
 uint8_t dribblerSpeedSetPoint = 0;
-void Task_Controller_UpdateDribbler(uint8_t dribbler) {
+void Task_Controller_UpdateDribbler(uint16_t dribbler) {
     dribblerSpeedSetPoint = dribbler;
 }
 
@@ -216,7 +216,6 @@ void Task_Controller(const void* args) {
         }
 
         // dribbler duty cycle
-        // duty_cycles[4] = dribblerSpeed;
         duty_cycles[4] = get_damped_drib_duty_cycle();
 
         Thread::wait(CONTROL_LOOP_WAIT_MS);
